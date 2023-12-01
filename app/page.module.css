@@ -22,7 +22,7 @@
 .card_groups,
 .card_group,
 .big_card {
-  width: 30vmin;
+  width: 32vmin;
 }
 
 .card_groups {
@@ -223,7 +223,7 @@
 }
 
 .card_swiper_buttons {
-  margin-top: 8vmin;
+  margin-top: 20vmin;
   display: flex;
   justify-content: space-around;
   width: 20%;

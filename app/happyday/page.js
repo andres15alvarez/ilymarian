@@ -9,7 +9,7 @@ export default function HappiAnni() {
             <div className={styles.back}>
                 <AiOutlineArrowLeft />
                 <Link href='/' >
-                    back
+                    atras
                 </Link>
             </div>
             <section className={styles.wrapper}>
