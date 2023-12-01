@@ -233,8 +233,8 @@
   border-radius: 100%;
   color: white;
   background-color: transparent;
-  height: 7vmin;
-  width: 7vmin;
+  height: 8vmin;
+  width: 8vmin;
   display: grid;
   transition: all 500ms;
   place-items: center;
@@ -242,11 +242,11 @@
 }
 
 .arrow_button {
-  border: 0.4vmin solid rgb(0, 0, 0);
+  border: 0.4vmin solid rgb(250, 248, 248);
 }
 
 .heart_button {
-  border: 0.4vmin solid rgb(255, 0, 81);
+  border: 0.4vmin solid rgb(250, 248, 248);
 }
 
 .arrow_button:hover {

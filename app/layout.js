@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Happy 2 year anni ><',
-  description: 'For my precious eapm lyy',
+  title: 'Feliz dia mi niña preciosa',
+  description: 'Para mi niña',
 }
 
 export default function RootLayout({ children }) {
