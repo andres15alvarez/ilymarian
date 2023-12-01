@@ -1,0 +1,278 @@
+.container {
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  place-items: center;
+}
+
+.text {
+  color: white;
+}
+
+/* .card_groups, */
+.card_group,
+.big_card,
+.little_card {
+  aspect-ratio: 5 / 7;
+}
+
+.card_groups,
+.card_group,
+.big_card {
+  width: 30vmin;
+}
+
+.card_groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.card_group {
+  position: absolute;
+  transition: transform 400ms ease;
+}
+
+.card_group[data-status="unknown"] {
+  transform: scale(0);
+  transition: none;
+}
+
+.card_group[data-status="active"] {
+  transition-delay: 300ms;
+}
+
+.card_group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+
+.card_group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card_group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+
+.card_group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+
+.big_card,
+.little_card {
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  transition: transform 800ms cubic-bezier(.05, .43, .25, .95);
+
+  background-position: center;
+  background-size: cover;
+}
+
+.big_card {
+  border-radius: 1vmin;
+}
+
+.little_card {
+  width: 12vmin;
+  border-radius: 2vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.big_card:nth-child(2) {
+  background-image: url("/kittykiss.jpeg");
+  transform: translateX(-10%) rotate(-1deg);
+}
+
+.big_card:nth-child(4) {
+  background-image: url("/kittyrock.jpg");
+  transform: rotate(2deg);
+}
+
+.big_card:nth-child(6) {
+  background-image: url("/kittydisco.jpg");
+  transform: translateX(-6%) rotate(-3deg);
+}
+
+.big_card:nth-child(8) {
+  background-image: url("/kittycute.jpg");
+  transform: translate(10%, 3%) rotate(5deg);
+}
+
+.card_group[data-index="1"]>.big_card:nth-child(2) {
+  background-image: url("/marian1.JPG");
+}
+
+.card_group[data-index="1"]>.big_card:nth-child(4) {
+  background-image: url("/marian2.jpeg");
+}
+
+.card_group[data-index="1"]>.big_card:nth-child(6) {
+  background-image: url("/marian4.jpeg");
+}
+
+.card_group[data-index="1"]>.big_card:nth-child(8) {
+  background-image: url("/marian3.JPG");
+}
+
+.card_group[data-index="2"]>.big_card:nth-child(2) {
+  background-image: url("/travel1.jpeg");
+}
+
+.card_group[data-index="2"]>.big_card:nth-child(4) {
+  background-image: url("/travel2.jpeg");
+}
+
+.card_group[data-index="2"]>.big_card:nth-child(6) {
+  background-image: url("/travel3.jpeg");
+}
+
+.card_group[data-index="2"]>.big_card:nth-child(8) {
+  background-image: url("/travel4.JPEG");
+}
+
+.little_card:nth-child(1) {
+  background-image: url("https://dsm01pap007files.storage.live.com/y4mXfHbPgjF_QVU0hOQKFaa2BMVxE7qeGHkM8JagJTzqkZg2pV9kHvCsEA33-mvZSbYiIJ9BXt4nam3A9VKPBjonNaFu6LrjnwEeQppy9oWgPFiffqED-PQpa2vFVoKxH0O4NzjEUTTRkWNk1Gb4IhBEuy-7xx5PQzv58LV_b3QifmgSsanQXB_SncA2jE3cOwx?width=736&height=736&cropmode=none");
+}
+
+.little_card:nth-child(3) {
+  background-image: url("https://dsm01pap007files.storage.live.com/y4mZ6v_NCUszEa-KZZKbxpXclHOExD37WyFP4vMpORL0nGEjhaNt4aD4VVbd0xBzpDHsq7-Ar-ND5zjziZUPUBZAVbH0a9rLeb39FXtv5FGNxs6nWZxqZJJbjdtQPHjerIRQCsJHYJDbmbGlZeyqf-0ZCbai0RGjSEnBezH_vYBTTAq4zXLUhp9lo9138Zz0-SQ?width=736&height=736&cropmode=none");
+}
+
+.little_card:nth-child(5) {
+  background-image: url("https://dsm01pap007files.storage.live.com/y4mr0Tj7SXopXv-fnUP_vOfbRmX8zp6jpu3msWkU4JwAN3LOFKF5Pw96cuwwVM_x18mxfMIbooG_9fEplxdeF9KusC5XUmOezMueFRBeyTp-gFcwsKdCJmum9E45ERbKS-Dqm8tLDh64AHmSN2FNCWXRa5eIoiR9wC-ib1pt6TQO9oHlDjBW6lug5TzcXHYIYZ7?width=566&height=541&cropmode=none");
+}
+
+.little_card:nth-child(7) {
+  background-image: url("https://dsm01pap007files.storage.live.com/y4mNZ_62lQMClj1go3wwqISdwE9O2kIBXq90YSWeTfwTWjjyniKh-gnvi_CUtxnlmlSib2_5Wdl_Jt3vIq267EAuIi-aETWWAg99fm8e-NqP7BiXzNpCpowQ8tmOMTyZplav3joisabmaHos62VSp4iP780sU0azf2_lKuZOgmPwtgwrgqVGdkMQSn2sQ-o4A5b?width=212&height=212&cropmode=none");
+}
+
+.card_group[data-index="1"]>.little_card:nth-child(1) {
+  background-image: url("/dates1.jpeg");
+}
+
+.card_group[data-index="1"]>.little_card:nth-child(3) {
+  background-image: url("/dates2.jpeg");
+}
+
+.card_group[data-index="1"]>.little_card:nth-child(5) {
+  background-image: url("/dates3.jpeg");
+}
+
+.card_group[data-index="1"]>.little_card:nth-child(7) {
+  background-image: url("/dates4.jpeg");
+}
+
+.card_group[data-index="2"]>.little_card:nth-child(1) {
+  background-image: url("/travel5.jpeg");
+}
+
+.card_group[data-index="2"]>.little_card:nth-child(3) {
+  background-image: url("/travel6.jpeg");
+}
+
+.card_group[data-index="2"]>.little_card:nth-child(5) {
+  background-image: url("/travel7.jpeg");
+}
+
+.card_group[data-index="2"]>.little_card:nth-child(7) {
+  background-image: url("/travel8.jpeg");
+}
+
+.card_group:hover>.card {
+  box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.card_group:hover>.big_card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg);
+}
+
+.card_group:hover>.big_card:nth-child(4) {
+  transform: translate(-25%, 8%) rotate(-8deg);
+}
+
+.card_group:hover>.big_card:nth-child(6) {
+  transform: translate(25%, 8%) rotate(8deg);
+}
+
+.card_group:hover>.big_card:nth-child(8) {
+  transform: translate(75%, 16%) rotate(24deg);
+}
+
+.card_group:hover>.little_card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-15deg);
+}
+
+.card_group:hover>.little_card:nth-child(3) {
+  transform: translate(160%, 170%) rotate(15deg);
+}
+
+.card_group:hover>.little_card:nth-child(5) {
+  transform: translate(-200%, -170%) rotate(15deg);
+}
+
+.card_group:hover>.little_card:nth-child(7) {
+  transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+.card_swiper_buttons {
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+}
+
+.card_swiper_buttons>button {
+  border-radius: 100%;
+  color: white;
+  background-color: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  display: grid;
+  transition: all 500ms;
+  place-items: center;
+  cursor: pointer;
+}
+
+.arrow_button {
+  border: 0.4vmin solid rgb(0, 0, 0);
+}
+
+.heart_button {
+  border: 0.4vmin solid rgb(255, 0, 81);
+}
+
+.arrow_button:hover {
+  background-color: black;
+}
+
+.arrow_button:hover > .arrow_icon {
+  color: white;
+}
+
+.heart_button:hover {
+  background-color: rgb(255, 0, 81);
+}
+
+.heart_button:hover > .heart_icon {
+  color: white;
+}
+
+.arrow_icon {
+  transition: all 500ms;
+  font-size: 1.8rem;
+  color: black;
+}
+
+.heart_icon {
+  transition: all 500ms;
+  font-size: 1.8rem;
+  color: rgb(255, 0, 81);
+}
